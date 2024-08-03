@@ -21,10 +21,6 @@ embedded_instances {
   "  }\n"
   "}\n"
   ""
-  position {
-    x: 636.0
-    y: 372.0
-  }
 }
 embedded_instances {
   id: "Player"
@@ -51,10 +47,6 @@ embedded_instances {
   "\"\n"
   "}\n"
   ""
-  position {
-    x: 300.0
-    y: 218.0
-  }
   scale3 {
     x: 0.7
     y: 0.7
@@ -70,7 +62,7 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"defould_player_hands\\\"\\n"
+  "  data: \"default_animation: \\\"main_charackter_default\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
   "textures {\\n"
   "  sampler: \\\"texture_sampler\\\"\\n"
@@ -103,6 +95,7 @@ embedded_instances {
   "near_z: 0.1\\n"
   "far_z: 3250.0\\n"
   "auto_aspect_ratio: 1\\n"
+  "orthographic_projection: 1\\n"
   "\"\n"
   "}\n"
   ""
