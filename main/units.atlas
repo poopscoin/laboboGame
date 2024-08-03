@@ -1,0 +1,10 @@
+images {
+  image: "/assets/images/charackter_default_no_hands.png"
+}
+images {
+  image: "/assets/images/defould_player_hands.png"
+}
+images {
+  image: "/assets/images/main_charackter_default.png"
+}
+extrude_borders: 2

@@ -1,0 +1,112 @@
+name: "main"
+scale_along_z: 0
+embedded_instances {
+  id: "Background"
+  data: "components {\n"
+  "  id: \"main\"\n"
+  "  component: \"/main/main.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"background\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"alfa_Fon\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/main/map_object.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    z: -0.5\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 636.0
+    y: 372.0
+  }
+}
+embedded_instances {
+  id: "Player"
+  children: "Hands"
+  children: "PlayerCamera"
+  data: "components {\n"
+  "  id: \"player\"\n"
+  "  component: \"/main/player.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"charackter_default_no_hands\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "size {\\n"
+  "  x: 150.0\\n"
+  "  y: 150.0\\n"
+  "}\\n"
+  "size_mode: SIZE_MODE_MANUAL\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/main/units.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 300.0
+    y: 218.0
+  }
+  scale3 {
+    x: 0.7
+    y: 0.7
+    z: 0.7
+  }
+}
+embedded_instances {
+  id: "Hands"
+  data: "components {\n"
+  "  id: \"playerHands\"\n"
+  "  component: \"/main/playerHands.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"defould_player_hands\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/main/units.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    z: 0.1
+  }
+  scale3 {
+    x: 0.3
+    y: 0.3
+    z: 0.3
+  }
+}
+embedded_instances {
+  id: "PlayerCamera"
+  children: "playerCamera2"
+  data: ""
+}
+embedded_instances {
+  id: "playerCamera2"
+  data: "embedded_components {\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 0.7854\\n"
+  "near_z: 0.1\\n"
+  "far_z: 3250.0\\n"
+  "auto_aspect_ratio: 1\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    z: 1044.2858
+  }
+}
