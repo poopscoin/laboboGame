@@ -1,7 +1,6 @@
 local DISPLAY_WIDTH = sys.get_config_int("display.width")
 local DISPLAY_HEIGHT = sys.get_config_int("display.height")
 
-
 function init(self)
     msg.post(".", "acquire_input_focus")
 end
@@ -28,7 +27,15 @@ local function look_at(target_position)
     local my_position = go.get_world_position()
 
     local angle = math.atan2(my_position.x - target_position.x, target_position.y - my_position.y)
+	local obj_scale = go.get_scale("/Hands")
 
+	if angle < 0 then
+		obj_scale.x = -obj_scale.x
+	else 
+		obj_scale.x = math.abs(obj_scale.x)
+	end
+
+	go.set_scale(obj_scale, "/Hands")
     go.set_rotation(vmath.quat_rotation_z(angle))
 end
 

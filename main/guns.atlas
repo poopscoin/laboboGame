@@ -1,0 +1,4 @@
+images {
+  image: "/assets/images/alfa_gun.png"
+}
+extrude_borders: 2
